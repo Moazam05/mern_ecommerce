@@ -1,0 +1,22 @@
+{
+  "name": "mern_ecommerce",
+  "version": "1.0.0",
+  "description": "MERN E-Commerce",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moazam05/mern_ecommerce.git"
+  },
+  "author": "Salman Moazam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Moazam05/mern_ecommerce/issues"
+  },
+  "homepage": "https://github.com/Moazam05/mern_ecommerce#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
