@@ -1,7 +1,9 @@
 import mongoose from 'mongoose';
 
-const reviewSchema =
-  ({
+const { Schema } = mongoose;
+
+const reviewSchema = new Schema(
+  {
     name: {
       type: String,
       required: true,
@@ -17,10 +19,11 @@ const reviewSchema =
   },
   {
     timestamps: true,
-  });
+  }
+);
 
-const productSchema =
-  ({
+const productSchema = new Schema(
+  {
     user: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
@@ -68,9 +71,8 @@ const productSchema =
       default: 0,
     },
   },
-  {
-    timestamps: true,
-  });
+  { timestamps: true }
+);
 
 const Product = mongoose.model('Product', productSchema);
 

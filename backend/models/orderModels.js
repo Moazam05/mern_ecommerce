@@ -1,7 +1,9 @@
 import mongoose from 'mongoose';
 
-const orderSchema =
-  ({
+const { Schema } = mongoose;
+
+const orderSchema = new Schema(
+  {
     user: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
@@ -68,9 +70,8 @@ const orderSchema =
       type: Date,
     },
   },
-  {
-    timestamps: true,
-  });
+  { timestamps: true }
+);
 
 const Order = mongoose.model('Order', orderSchema);
 
