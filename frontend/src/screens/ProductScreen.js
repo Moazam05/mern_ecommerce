@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 
 import {
   Row,
@@ -24,7 +23,13 @@ const ProductScreen = () => {
   let { id } = useParams();
   const navigate = useNavigate();
 
-  const [qty, setQty] = useState(0);
+  const cart = useSelector((state) => state.cart);
+
+  const { cartItems } = cart;
+
+  console.log(cartItems);
+
+  const [qty, setQty] = useState(1);
 
   const dispatch = useDispatch();
 
